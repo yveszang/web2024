@@ -1,0 +1,406 @@
+{
+    "math": [
+        {
+            "question": "What is 2 + 2?",
+            "options": [
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "correct": "4"
+        },
+        {
+            "question": "What is 10 x 2?",
+            "options": [
+                "10",
+                "20",
+                "30",
+                "40"
+            ],
+            "correct": "20"
+        },
+        {
+            "question": "What is the square root of 16?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "correct": "4"
+        },
+        {
+            "question": "What is 5 + 8?",
+            "options": [
+                "10",
+                "12",
+                "13",
+                "15"
+            ],
+            "correct": "13"
+        },
+        {
+            "question": "What is 50 / 5?",
+            "options": [
+                "5",
+                "10",
+                "15",
+                "20"
+            ],
+            "correct": "10"
+        },
+        {
+            "question": "What is 7 x 8?",
+            "options": [
+                "42",
+                "48",
+                "54",
+                "56"
+            ],
+            "correct": "56"
+        },
+        {
+            "question": "What is 100 - 25?",
+            "options": [
+                "65",
+                "70",
+                "75",
+                "80"
+            ],
+            "correct": "75"
+        },
+        {
+            "question": "What is the cube of 3?",
+            "options": [
+                "9",
+                "18",
+                "27",
+                "36"
+            ],
+            "correct": "27"
+        },
+        {
+            "question": "What is 15 % of 200?",
+            "options": [
+                "20",
+                "25",
+                "30",
+                "35"
+            ],
+            "correct": "30"
+        },
+        {
+            "question": "What is 1/2 of 100?",
+            "options": [
+                "25",
+                "30",
+                "50",
+                "75"
+            ],
+            "correct": "50"
+        },
+        {
+            "question": "What is 5^2?",
+            "options": [
+                "10",
+                "15",
+                "20",
+                "25"
+            ],
+            "correct": "25"
+        },
+        {
+            "question": "What is 12 x 12?",
+            "options": [
+                "124",
+                "144",
+                "164",
+                "184"
+            ],
+            "correct": "144"
+        },
+        {
+            "question": "What is the sum of 100 and 250?",
+            "options": [
+                "300",
+                "350",
+                "400",
+                "450"
+            ],
+            "correct": "350"
+        },
+        {
+            "question": "What is 18 ÷ 3?",
+            "options": [
+                "3",
+                "5",
+                "6",
+                "9"
+            ],
+            "correct": "6"
+        },
+        {
+            "question": "What is the result of 8 + 4 - 3?",
+            "options": [
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "correct": "9"
+        },
+        {
+            "question": "What is 20% of 50?",
+            "options": [
+                "5",
+                "8",
+                "10",
+                "12"
+            ],
+            "correct": "10"
+        },
+        {
+            "question": "What is 3 x 5 + 2?",
+            "options": [
+                "15",
+                "16",
+                "17",
+                "18"
+            ],
+            "correct": "17"
+        },
+        {
+            "question": "What is the square of 12?",
+            "options": [
+                "124",
+                "134",
+                "144",
+                "154"
+            ],
+            "correct": "144"
+        },
+        {
+            "question": "What is 100 + 200 - 50?",
+            "options": [
+                "150",
+                "200",
+                "250",
+                "300"
+            ],
+            "correct": "250"
+        },
+        {
+            "question": "What is 9 ÷ 3 + 4?",
+            "options": [
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "correct": "7"
+        }
+    ],
+    "science": [
+        {
+            "question": "What planet is known as the Red Planet?",
+            "options": [
+                "Earth",
+                "Mars",
+                "Jupiter",
+                "Venus"
+            ],
+            "correct": "Mars"
+        },
+        {
+            "question": "What is H2O?",
+            "options": [
+                "Oxygen",
+                "Water",
+                "Hydrogen",
+                "Carbon dioxide"
+            ],
+            "correct": "Water"
+        },
+        {
+            "question": "What is the process by which plants make their food?",
+            "options": [
+                "Digestion",
+                "Respiration",
+                "Photosynthesis",
+                "Transpiration"
+            ],
+            "correct": "Photosynthesis"
+        },
+        {
+            "question": "Which gas is most abundant in Earth's atmosphere?",
+            "options": [
+                "Oxygen",
+                "Nitrogen",
+                "Carbon dioxide",
+                "Helium"
+            ],
+            "correct": "Nitrogen"
+        },
+        {
+            "question": "What is the boiling point of water?",
+            "options": [
+                "0°C",
+                "50°C",
+                "100°C",
+                "150°C"
+            ],
+            "correct": "100°C"
+        },
+        {
+            "question": "What is the chemical symbol for gold?",
+            "options": [
+                "Au",
+                "Ag",
+                "Go",
+                "Gd"
+            ],
+            "correct": "Au"
+        },
+        {
+            "question": "What is the nearest planet to the Sun?",
+            "options": [
+                "Venus",
+                "Earth",
+                "Mercury",
+                "Mars"
+            ],
+            "correct": "Mercury"
+        },
+        {
+            "question": "Which organ is responsible for pumping blood?",
+            "options": [
+                "Brain",
+                "Heart",
+                "Liver",
+                "Lungs"
+            ],
+            "correct": "Heart"
+        },
+        {
+            "question": "What is the hardest natural substance on Earth?",
+            "options": [
+                "Iron",
+                "Diamond",
+                "Gold",
+                "Silver"
+            ],
+            "correct": "Diamond"
+        },
+        {
+            "question": "Which organelle is known as the powerhouse of the cell?",
+            "options": [
+                "Nucleus",
+                "Mitochondria",
+                "Ribosome",
+                "Golgi body"
+            ],
+            "correct": "Mitochondria"
+        },
+        {
+            "question": "What is the speed of light?",
+            "options": [
+                "3,000 km/s",
+                "300,000 km/s",
+                "30,000 km/s",
+                "3,000,000 km/s"
+            ],
+            "correct": "300,000 km/s"
+        },
+        {
+            "question": "What is the primary gas used in photosynthesis?",
+            "options": [
+                "Oxygen",
+                "Carbon dioxide",
+                "Hydrogen",
+                "Nitrogen"
+            ],
+            "correct": "Carbon dioxide"
+        },
+        {
+            "question": "What planet is known for its rings?",
+            "options": [
+                "Mars",
+                "Jupiter",
+                "Saturn",
+                "Neptune"
+            ],
+            "correct": "Saturn"
+        },
+        {
+            "question": "What is the study of living organisms called?",
+            "options": [
+                "Chemistry",
+                "Physics",
+                "Biology",
+                "Geology"
+            ],
+            "correct": "Biology"
+        },
+        {
+            "question": "What is the main element in the Sun?",
+            "options": [
+                "Oxygen",
+                "Helium",
+                "Hydrogen",
+                "Carbon"
+            ],
+            "correct": "Hydrogen"
+        },
+        {
+            "question": "What is the smallest unit of matter?",
+            "options": [
+                "Molecule",
+                "Atom",
+                "Electron",
+                "Proton"
+            ],
+            "correct": "Atom"
+        },
+        {
+            "question": "What is Earth's only natural satellite?",
+            "options": [
+                "Sun",
+                "Moon",
+                "Mars",
+                "Venus"
+            ],
+            "correct": "Moon"
+        },
+        {
+            "question": "What type of energy does the Sun produce?",
+            "options": [
+                "Chemical",
+                "Nuclear",
+                "Thermal",
+                "Solar"
+            ],
+            "correct": "Nuclear"
+        },
+        {
+            "question": "Which part of the plant conducts photosynthesis?",
+            "options": [
+                "Root",
+                "Stem",
+                "Leaf",
+                "Flower"
+            ],
+            "correct": "Leaf"
+        },
+        {
+            "question": "What is the largest planet in our solar system?",
+            "options": [
+                "Earth",
+                "Jupiter",
+                "Saturn",
+                "Neptune"
+            ],
+            "correct": "Jupiter"
+        }
+    ]
+}

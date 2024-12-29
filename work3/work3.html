@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid p-5 bg-dark text-white text-center">
+        <h1>แบบทดสอบ ReactJS</h1>
+    </div>
+    <div id="app"></div>
+
+    <script type="text/babel">
+        function App() {
+            const [step, setStep] = React.useState(0); // 0: Start, 1: Quiz, 2: Result
+            const [selectedSubject, setSelectedSubject] = React.useState("");
+            const [questions, setQuestions] = React.useState([]);
+            const [userAnswers, setUserAnswers] = React.useState([]);
+            const [score, setScore] = React.useState(0);
+
+            const fetchQuestions = async (subject) => {
+                try {
+                    const response = await fetch("./quiz3.json");
+                    const data = await response.json();
+                    setQuestions(data[subject]);
+                    setStep(1);
+                } catch (error) {
+                    console.error("Failed to fetch questions:", error);
+                    alert("Failed to load questions. Please try again.");
+                }
+            };
+
+            const handleStartQuiz = () => {
+                if (!selectedSubject) {
+                    alert("Please select a subject!");
+                    return;
+                }
+                fetchQuestions(selectedSubject);
+            };
+
+            const handleAnswerChange = (index, answer) => {
+                const updatedAnswers = [...userAnswers];
+                updatedAnswers[index] = answer;
+                setUserAnswers(updatedAnswers);
+            };
+
+            const handleCheckAnswers = () => {
+                let calculatedScore = 0;
+                questions.forEach((q, index) => {
+                    if (userAnswers[index] === q.correct) {
+                        calculatedScore++;
+                    }
+                });
+                setScore(calculatedScore);
+                setStep(2); // Move to result step
+            };
+
+            const handleRestart = () => {
+                setStep(0);
+                setSelectedSubject("");
+                setQuestions([]);
+                setUserAnswers([]);
+                setScore(0);
+            };
+
+            return (
+                <div className="container mt-5 p-5">
+                    <div className="row justify-content-center">
+                        <div className="col-md-8">
+                            {step === 0 && (
+                                <div id="startBox">
+                                    <h1>Welcome to the Quiz</h1>
+                                    <p>Select a subject and start the quiz.</p>
+                                    <select
+                                        id="subject-select"
+                                        className="form-select mb-3"
+                                        value={selectedSubject}
+                                        onChange={(e) => setSelectedSubject(e.target.value)}
+                                    >
+                                        <option value="">-- Choose a Subject --</option>
+                                        <option value="math">Mathematics</option>
+                                        <option value="science">Biology</option>
+                                    </select>
+                                    <button className="btn btn-outline-dark w-100" onClick={handleStartQuiz}>
+                                        เริ่มทำแบบทดสอบ
+                                    </button>
+                                </div>
+                            )}
+
+                            {step === 1 && (
+                                <div id="quizBox">
+                                    <h2>{selectedSubject === "math" ? "Mathematics" : "Biology"}</h2>
+                                    <div id="quizListBox" className="mb-4">
+                                        {questions.map((q, index) => (
+                                            <div key={index} className="mb-3">
+                                                <p>
+                                                    <b>{index + 1}. {q.question}</b>
+                                                </p>
+                                                {q.options.map((option, i) => (
+                                                    <div key={i}>
+                                                        <input
+                                                            type="radio"
+                                                            id={`q${index}o${i}`}
+                                                            name={`question-${index}`}
+                                                            value={option}
+                                                            checked={userAnswers[index] === option}
+                                                            onChange={() => handleAnswerChange(index, option)}
+                                                        />
+                                                        <label htmlFor={`q${index}o${i}`} className="ms-2">
+                                                            {option}
+                                                        </label>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <button className="btn btn-outline-dark w-100" onClick={handleCheckAnswers}>
+                                        ตรวจคำตอบ
+                                    </button>
+                                </div>
+                            )}
+
+                            {step === 2 && (
+                                <div id="resultBox" className="text-center">
+                                    <h2>ผลคะแนน: {score} / {questions.length}</h2>
+                                    <button className="btn btn-outline-dark w-100" onClick={handleRestart}>
+                                        เริ่มใหม่
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("app"));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

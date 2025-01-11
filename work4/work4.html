@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My 3D Model</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+
+</head>
+
+
+<body>
+    <a-scene>
+
+
+        <a-sky id="panorama" src="./bryan-goff-IuyhXAia8EA-unsplash.jpg"></a-sky>
+
+        <a-assets>
+            <a-asset-item id="avatar-model" src="./Adventurer.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity gltf-model="#avatar-model" animation-mixer="clip:*" scale="2 2 2" position="0 0.45905 -4.41752">
+            <a-animation attribute="position" dur="5000" to="0 1.5 -4.41752" direction="alternate"
+                repeat="indefinite"></a-animation>
+        </a-entity>
+
+        <a-text value="Name: Patarawadee wongnok\nID: 663380178-2\nAbout Me: I am an IT student at KKU." color="#ffffff"
+            position="0 0 -3" width="4" align="center">
+        </a-text>
+
+        <a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+
+    </a-scene>
+</body>
+
+</html>
